@@ -16,7 +16,6 @@ class SvgLogo{
     setShapeElement(shape){
         this.shapeElement = shape.render();
     }
-
 }
 
 inquirer
@@ -43,6 +42,7 @@ inquirer
       name: 'shapeColor',
     },
 ])
+
 .then((data) => {
   const filename = `logo.svg`;
   let createShape;
@@ -63,5 +63,4 @@ inquirer
   fs.writeFile(filename, svg.render(), (err) =>
     err ? console.log(err) : console.log('Generated logo.svg')
   );
-
 })
