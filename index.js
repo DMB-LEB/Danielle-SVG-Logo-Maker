@@ -8,7 +8,7 @@ class SvgLogo{
         this.shapeElement = ''
     }
     render(){
-        return `<svg width="300" height="200"> ${this.shapeElement} ${this.textElement}</svg>`
+        return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"> <g> ${this.shapeElement} ${this.textElement} </g> </svg>`
     }
     setTextElement(text, color){
         this.textElement = `<text x="150" y= "150" text-anchor="middle" fill="${color}"> ${text}</text>`
@@ -53,12 +53,15 @@ inquirer
         createShape = new Triangle(data.shapeColor);
     } else if (data.shape === 'Square') {
         createShape = new Square(data.shapeColor);
-    }
+    };
+
 
     const svg = new SvgLogo();
     svg.setShapeElement(createShape);
     svg.setTextElement(data.characters, data.textColor);
     console.log(svg);
+
+
 
   fs.writeFile(filename, svg.render(), (err) =>
     err ? console.log(err) : console.log('Generated logo.svg')

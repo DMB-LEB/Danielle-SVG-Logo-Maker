@@ -1,1 +1,1 @@
-<svg width="300" height="200"> <circle cx="150" cy="150" r="50" fill="white"/> <text x="150" y= "150" text-anchor="middle" fill="blue"> ggg</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"> <g> <polygon points="150, 18 244, 182 56, 182" fill="yellow"/> <text x="150" y= "150" text-anchor="middle" fill="pink"> rr</text> </g> </svg>
